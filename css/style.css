@@ -1,0 +1,157 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: url("/assets/media/bg-01.jpg");
+    background-size: cover;
+}
+
+*{
+    font-family: montserrat;
+}
+
+.main-container {
+    width: 500px;
+    height: 700px;
+    background-color: white;
+    margin: 0 auto;
+    position:absolute;
+ left:50%;
+ top:50%;
+ transform: translate(-50%, -50%);
+ border-radius: 10px;
+ overflow: hidden;
+ padding: 65px 55px 54px;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
+header {
+    font-size: 39px;
+    color: #555555;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: 49px;
+    font-weight: 900;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    padding-left: 7px;
+}
+
+input {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.2;
+    height: 55px;
+    background: 0 0;
+    padding: 0 7px 0 43px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #d9d9d9;
+    transition: border-bottom 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 2px solid #dd00ff; 
+}
+
+.input1{
+margin-bottom: 23px;
+}
+
+
+.forgot-password, .forgot-password a:link, .forgot-password a:visited{
+    text-align: right;
+    text-decoration: none;
+    color: black;
+    padding: 8px 0px 60px 0px;
+}
+
+.login-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.login-btn button {
+    width: 100%;
+    border-radius: 25px;
+    margin: 0 auto;
+    background: -webkit-linear-gradient(right,#00dbde,#fc00ff,#00dbde,#fc00ff);
+    transition: all .4s;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    height: 50px;
+    padding: 0 20px;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.fb{
+    font-size: 25px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: #3b5998;
+    text-decoration: none;
+}
+
+.twitter {
+    font-size: 25px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: #1da1f2;
+    text-decoration: none;
+}
+
+.google {
+    font-size: 25px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: #ea4335;
+    text-decoration: none;
+}
+
+.fb:hover, .twitter:hover, .google:hover {
+    background-color: #333;
+    transition: .8s;
+}
+
+.sign-up{
+    text-align: center;
+}
+
+/* to add effect of underline of login and password, to add icons */
