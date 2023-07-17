@@ -4,6 +4,7 @@ body {
     box-sizing: border-box;
     background-image: url("/assets/media/bg-01.jpg");
     background-size: cover;
+    background-attachment: fixed;
 }
 
 * {
@@ -12,7 +13,7 @@ body {
 
 .main-container {
     width: 500px;
-    height: 700px;
+    height: 80%;
     background-color: white;
     margin: 0 auto;
     position: absolute;
@@ -25,6 +26,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-width: 375px;
+
 }
 
 header {
@@ -267,4 +270,20 @@ hr {
 
 .sign-up {
     text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+.main-container {
+    width: 100%;
+    height: 100%;
+    transform: none;
+    left: 0;
+    top: 0;
+    border-radius: 0;
+}   
+
+body {
+    background-image: none;
+}
 }
