@@ -6,7 +6,7 @@ body {
     background-size: cover;
 }
 
-*{
+* {
     font-family: montserrat;
 }
 
@@ -15,16 +15,16 @@ body {
     height: 700px;
     background-color: white;
     margin: 0 auto;
-    position:absolute;
- left:50%;
- top:50%;
- transform: translate(-50%, -50%);
- border-radius: 10px;
- overflow: hidden;
- padding: 65px 55px 54px;
- display: flex;
- flex-direction: column;
- justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 65px 55px 54px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 header {
@@ -53,6 +53,7 @@ input {
     color: #333;
     line-height: 1.2;
     height: 55px;
+    width: 100%;
     background: 0 0;
     padding: 0 7px 0 43px;
     outline: none;
@@ -61,21 +62,70 @@ input {
     transition: border-bottom 0.3s ease;
 }
 
-input:focus {
-    outline: none;
-    border-bottom: 2px solid #dd00ff; 
+.username,
+.password {
+    position: relative;
+    padding-right: 55px;
 }
 
-.input1{
-margin-bottom: 23px;
+.username::before,
+.password::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #a64bf4;
+    transition: width 0.4s ease;
+    /* Add a transition for the width property */
+}
+
+.username:hover::before,
+.password:hover::before {
+    width: 100%;
+    /* When hovered, set the width to 100% to reveal the border */
+}
+
+/* Placeholder disapears on the focused state of the input fields */
+.username input[type="email"]:focus::placeholder,
+.password input[type="password"]:focus::placeholder {
+    color: transparent;
 }
 
 
-.forgot-password, .forgot-password a:link, .forgot-password a:visited{
+
+.username i,
+.password i {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+.username {
+    margin-bottom: 23px;
+}
+
+
+.input {
+    padding: 20px;
+    font-size: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.forgot-password,
+.forgot-password a:link,
+.forgot-password a:visited {
     text-align: right;
     text-decoration: none;
     color: black;
-    padding: 8px 0px 60px 0px;
+    padding: 8px 0px 40px 0px;
+}
+
+.forgot-password,
+.forgot-password a:hover {
+    color: #a64bf4;
 }
 
 .login-btn {
@@ -87,15 +137,78 @@ margin-bottom: 23px;
     width: 100%;
     border-radius: 25px;
     margin: 0 auto;
-    background: -webkit-linear-gradient(right,#00dbde,#fc00ff,#00dbde,#fc00ff);
-    transition: all .4s;
+    background: -webkit-linear-gradient(right, #fc00ff, #00dbde, #fc00ff);
+    /*used for transition*/
+    background-size: 200%;
+    /*used for transition*/
+    background-position: right center;
+    /*used for transition*/
+    transition: background-position .7s;
+    /*used for transition*/
+    overflow: hidden;
     border: none;
     color: white;
     font-weight: 600;
     font-size: 16px;
     height: 50px;
     padding: 0 20px;
+    cursor: pointer;
 }
+
+.login-btn button:hover {
+    background-position: left center;
+    /*used for transition*/
+}
+
+/*Here is the animation, but I deactivated it*/
+/*
+.login-btn button:hover {
+   transition: background-position 0.3s ease;
+  background-position: left; /* Slide the background to the left on hover */
+/*}*/
+
+/*.login-btn button:hover {*/
+/* animation: slideBackground 3s forwards;*/
+/* Apply the animation on hover */
+/*}*/
+
+/* CSS Animation for sliding the background */
+/*@keyframes slideBackground {
+    0% {
+        background-position: 100%;
+    }
+    50% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+*/
+
+.sign-up a {
+    color: #a64bf4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sign-up a:hover {
+    color:#00dbde;
+    transition: .7s;
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    height: 5%;
+}
+
+hr {
+    width: 100%;
+    height: 0px;
+}
+
 
 .social-media {
     display: flex;
@@ -103,7 +216,7 @@ margin-bottom: 23px;
     justify-content: center;
 }
 
-.fb{
+.fb {
     font-size: 25px;
     color: white;
     display: flex;
@@ -145,13 +258,13 @@ margin-bottom: 23px;
     text-decoration: none;
 }
 
-.fb:hover, .twitter:hover, .google:hover {
+.fb:hover,
+.twitter:hover,
+.google:hover {
     background-color: #333;
     transition: .8s;
 }
 
-.sign-up{
+.sign-up {
     text-align: center;
 }
-
-/* to add effect of underline of login and password, to add icons */
